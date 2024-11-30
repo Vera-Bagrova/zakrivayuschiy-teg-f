@@ -89,7 +89,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 1em;
 }
 
 .theme-menu__button {
