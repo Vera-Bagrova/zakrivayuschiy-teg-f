@@ -53,7 +53,7 @@
 }
 
 .text-accent {
-  font-family: var(--accent-font, monospace);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
 }
 
@@ -132,7 +132,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  animation: pointer 0.5s infinite ease-in-out;
+  animation: pointer 0.5s infinite ease-in-out alternate;
   inset-inline-start: -25px;
 }
 
@@ -240,6 +240,10 @@
 }
 
 .like-icon:hover {
+  .heart {
+    cursor: pointer;
+  }
+
   .main-body {
     fill: var(--contour);
     transition: fill 0.3s 0.05s linear;
@@ -280,12 +284,12 @@
   }
 
   .heart {
-    animation: boost 0.3s 0.1s ease-in;
+    animation: boost 0.3s 0.1s ease-in alternate;
     transform-origin: center;
   }
 
   .sparks {
-    animation: sparked 0.3s 0.3s ease-in;
+    animation: sparked 0.3s 0.3s ease-in alternate;
   }
 }
 
@@ -320,9 +324,12 @@
   box-shadow: 2px 2px 0 0 var(--color, #000);
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button:hover::after {
   transform: translateX(0);
-  cursor: pointer;
 }
 
 .button__text {
